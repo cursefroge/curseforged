@@ -44,9 +44,6 @@ dependencies:
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.5
-  tinacms:
-    specifier: ^1.5.22
-    version: 1.5.22(@babel/core@7.23.2)(@types/react-dom@18.2.14)(@types/react@18.2.34)(react-dom@18.2.0)(react@18.2.0)
   typescript:
     specifier: ^5.2.2
     version: 5.2.2

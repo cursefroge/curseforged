@@ -7,6 +7,8 @@ import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 
+import alpinejs from "@astrojs/alpinejs";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -16,6 +18,7 @@ export default defineConfig({
     }),
     react(),
     sitemap(),
+    alpinejs(),
   ],
   markdown: {
     remarkPlugins: [
