@@ -5,12 +5,19 @@ const greetings = ['Hello', 'Hola', 'Bonjour', 'Hallo', 'Ciao', 'Olá', 'こん�
 let index = 0;
 const msg = ref(greetings[index]);
 
+const names = ['cursefroge', 'カースフロッジ']
+const name = ref(names[0]);
+
 onMounted(() => {
   setInterval(() => {
     index = (index + 1) % greetings.length;
     msg.value = greetings[index];
   }, 3000);
 });
+
+function toggleName() {
+  name.value = name.value === names[0] ? names[1] : names[0];
+}
 
 onUnmounted(() => {
   clearInterval(index);
@@ -19,7 +26,7 @@ onUnmounted(() => {
 
 <template>
   <div class="greetings">
-    <h1>cursefroge</h1>
+    <h1 :key="name" @click="toggleName()">{{ name }}</h1>
     <transition name="slide-fade" mode="out-in">
       <h3 :key="msg">{{ msg }}</h3>
     </transition>
@@ -50,6 +57,7 @@ h1 {
   font-size: 2.6rem;
   position: relative;
   top: -10px;
+  font-weight: 700;
 }
 
 h3 {
