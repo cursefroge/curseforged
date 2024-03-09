@@ -8,7 +8,10 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script>
+      // if the current page exists, we redirect to it (vue router)
+      window.location = window.location.base;
+    </script>
     <h1>Error: Page not found</h1>
   </body>
 </html>
