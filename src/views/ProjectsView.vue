@@ -51,9 +51,10 @@ h3 {
   margin-bottom: 0.5rem;
 }
 a {
-  color: inherit;
+  color: var(--vt-c-white), 
 }
 a:hover {
-  background: var(--vt-c-black);
+  /* background no opacity */
+  background-color: transparent;
 }
 </style>

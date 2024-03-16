@@ -1,11 +1,22 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+// make the blob follow the cursor
+onMounted(() => {
+  const blob = document.getElementsByClassName('blob')[0] as HTMLElement
+  document.body.onpointermove = event => {
+    const { clientX, clientY } = event;
+    blob.animate({
+      left: `${clientX}px`,
+      top: `${clientY}px`
+    }, {duration: 3000, fill: 'forwards'})
+  }});
 </script>
 
 <template>
   <header>
-
+    <div class="blob" />
     <div class="wrapper">
       <HelloWorld />
 

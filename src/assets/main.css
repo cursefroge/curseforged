@@ -8,6 +8,10 @@
   font-weight: normal;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
 h1 {
   font-weight: bold;
@@ -38,5 +42,30 @@ a,
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+  }
+}
+.blob {
+  /* an oval, blurred. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 500px;
+  background: linear-gradient(45deg, hsla(270, 100%, 37%, 1), hsla(270, 100%, 37%, 0));
+  border-radius: 50%;
+  filter: blur(5rem);
+  z-index: -1;
+  /* fix the issue where the cursor is not in the middle */
+  transform: translate(-50%, -50%);
+  animation: blob 20s infinite;
+}
+
+@keyframes blob {
+  /* rotate the oval */
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
