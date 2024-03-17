@@ -44,6 +44,8 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: center;
+  /* the background translucent, just blurred */
+  backdrop-filter: blur(20px);
 }
 h3 {
   font-size: 1.5rem;
