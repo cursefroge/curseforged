@@ -1,15 +1,11 @@
 <template>
-  <div v-for="(item, index) in items" :key="index">
-    <a :href="item.link">
-      <div class="grid grid-cols-3 gap-4">
-        <div>
-          <!--<a :href="item.link">--->
-            <h3>{{ item.name }}</h3>
-            {{ item.description }}
-          <!--</a>-->
-        </div>
+  <div v-for="(item, index) in items" :key="index"  class="grid grid-cols-3 gap-4">
+      <div>
+        <a :href="item.link">
+          <h3>{{ item.name }}</h3>
+          {{ item.description }}
+        </a>
       </div>
-    </a>
   </div>
 </template>
 
