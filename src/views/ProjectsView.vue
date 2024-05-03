@@ -1,11 +1,15 @@
 <template>
-  <div class="grid grid-cols-3 gap-4">
-    <div v-for="(item, index) in items" :key="index">
-      <a :href="item.link">
-        <h3>{{ item.name }}</h3>
-        {{ item.description }}
-      </a>
-     </div>
+  <div v-for="(item, index) in items" :key="index">
+    <a :href="item.link">
+      <div class="grid grid-cols-3 gap-4">
+        <div>
+          <!--<a :href="item.link">--->
+            <h3>{{ item.name }}</h3>
+            {{ item.description }}
+          <!--</a>-->
+        </div>
+      </div>
+    </a>
   </div>
 </template>
 
@@ -15,9 +19,9 @@ export default {
     return {
       items: [
         {
-          name: "Y",
-          description: "X, but better.",
-          link: "https://example.com",
+          name: 'dosu',
+          description: 'Passwordless setuid made in 91 lines',
+          link: 'https://github.com/cursefroge/dosu',
         },
       ],
     };

@@ -19,6 +19,7 @@ function toggleName() {
   name.value = name.value === names[0] ? names[1] : names[0];
 }
 
+
 onUnmounted(() => {
   clearInterval(index);
 });
