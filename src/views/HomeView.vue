@@ -6,7 +6,6 @@ import TheWelcome from '../components/TheWelcome.vue'
   <main>
     <!-- <TheWelcome /> -->
     <h1>hi</h1>
-    <p>how'd you get here?</p>
 
   </main>
 </template>
