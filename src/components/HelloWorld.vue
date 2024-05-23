@@ -5,7 +5,7 @@ const greetings = ['Hello', 'Hola', 'Bonjour', 'Hallo', 'Ciao', 'Olá', 'こん�
 let index = 0;
 const msg = ref(greetings[index]);
 
-const names = ['skye', '空']
+const names = ['cursefroge', '空']
 const name = ref(names[0]);
 
 onMounted(() => {
